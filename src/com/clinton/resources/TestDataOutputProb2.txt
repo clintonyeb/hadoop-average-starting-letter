@@ -1,0 +1,164 @@
+Number of Input-Splits: 4
+Number of Reducers: 3
+Mapper 0 Input
+Art is beautiful and life enhancing. However it pays very little. 
+Many artists have a hard life.
+Mapper 1 Input
+Sun is there every day. Moon comes every day. 
+Let us live every day as the best day so far.
+Mapper 2 Input
+Meditation is very important for the development of consciousness. 
+So let us meditate every day.
+Mapper 3 Input
+Earth is blue if you look from outer space. Mars is red. Moon is yellow. 
+Sun is white. What a wonderful world.
+Mapper 0 Output
+< p ,  [ 4, 1 ] >
+< a ,  [ 14, 4 ] >
+< b ,  [ 9, 1 ] >
+< e ,  [ 9, 1 ] >
+< v ,  [ 4, 1 ] >
+< h ,  [ 15, 3 ] >
+< i ,  [ 4, 2 ] >
+< l ,  [ 14, 3 ] >
+< m ,  [ 4, 1 ] >
+Mapper 1 Output
+< a ,  [ 2, 1 ] >
+< b ,  [ 4, 1 ] >
+< s ,  [ 5, 2 ] >
+< c ,  [ 5, 1 ] >
+< t ,  [ 8, 2 ] >
+< d ,  [ 12, 4 ] >
+< e ,  [ 15, 3 ] >
+< u ,  [ 2, 1 ] >
+< f ,  [ 3, 1 ] >
+< i ,  [ 2, 1 ] >
+< l ,  [ 7, 2 ] >
+< m ,  [ 4, 1 ] >
+Mapper 2 Output
+< c ,  [ 13, 1 ] >
+< s ,  [ 2, 1 ] >
+< t ,  [ 3, 1 ] >
+< d ,  [ 14, 2 ] >
+< u ,  [ 2, 1 ] >
+< e ,  [ 5, 1 ] >
+< v ,  [ 4, 1 ] >
+< f ,  [ 3, 1 ] >
+< i ,  [ 11, 2 ] >
+< l ,  [ 3, 1 ] >
+< m ,  [ 18, 2 ] >
+< o ,  [ 2, 1 ] >
+Mapper 3 Output
+< a ,  [ 1, 1 ] >
+< b ,  [ 4, 1 ] >
+< r ,  [ 3, 1 ] >
+< s ,  [ 8, 2 ] >
+< e ,  [ 5, 1 ] >
+< f ,  [ 4, 1 ] >
+< w ,  [ 23, 4 ] >
+< i ,  [ 10, 5 ] >
+< y ,  [ 9, 2 ] >
+< l ,  [ 4, 1 ] >
+< m ,  [ 8, 2 ] >
+< o ,  [ 5, 1 ] >
+Pairs send from Mapper 0 Reducer 0
+< i ,  [ 4, 2 ] >
+< l ,  [ 14, 3 ] >
+Pairs send from Mapper 0 Reducer 1
+< a ,  [ 14, 4 ] >
+< m ,  [ 4, 1 ] >
+< p ,  [ 4, 1 ] >
+< v ,  [ 4, 1 ] >
+Pairs send from Mapper 0 Reducer 2
+< b ,  [ 9, 1 ] >
+< e ,  [ 9, 1 ] >
+< h ,  [ 15, 3 ] >
+Pairs send from Mapper 1 Reducer 0
+< c ,  [ 5, 1 ] >
+< f ,  [ 3, 1 ] >
+< i ,  [ 2, 1 ] >
+< l ,  [ 7, 2 ] >
+< u ,  [ 2, 1 ] >
+Pairs send from Mapper 1 Reducer 1
+< a ,  [ 2, 1 ] >
+< d ,  [ 12, 4 ] >
+< m ,  [ 4, 1 ] >
+< s ,  [ 5, 2 ] >
+Pairs send from Mapper 1 Reducer 2
+< b ,  [ 4, 1 ] >
+< e ,  [ 15, 3 ] >
+< t ,  [ 8, 2 ] >
+Pairs send from Mapper 2 Reducer 0
+< c ,  [ 13, 1 ] >
+< f ,  [ 3, 1 ] >
+< i ,  [ 11, 2 ] >
+< l ,  [ 3, 1 ] >
+< o ,  [ 2, 1 ] >
+< u ,  [ 2, 1 ] >
+Pairs send from Mapper 2 Reducer 1
+< d ,  [ 14, 2 ] >
+< m ,  [ 18, 2 ] >
+< s ,  [ 2, 1 ] >
+< v ,  [ 4, 1 ] >
+Pairs send from Mapper 2 Reducer 2
+< e ,  [ 5, 1 ] >
+< t ,  [ 3, 1 ] >
+Pairs send from Mapper 3 Reducer 0
+< f ,  [ 4, 1 ] >
+< i ,  [ 10, 5 ] >
+< l ,  [ 4, 1 ] >
+< o ,  [ 5, 1 ] >
+< r ,  [ 3, 1 ] >
+Pairs send from Mapper 3 Reducer 1
+< a ,  [ 1, 1 ] >
+< m ,  [ 8, 2 ] >
+< s ,  [ 8, 2 ] >
+< y ,  [ 9, 2 ] >
+Pairs send from Mapper 3 Reducer 2
+< b ,  [ 4, 1 ] >
+< e ,  [ 5, 1 ] >
+< w ,  [ 23, 4 ] >
+Reducer 0 input
+< c , [ [ 5, 1 ],  [ 13, 1 ]] >
+< f , [ [ 3, 1 ],  [ 3, 1 ],  [ 4, 1 ]] >
+< i , [ [ 4, 2 ],  [ 2, 1 ],  [ 11, 2 ],  [ 10, 5 ]] >
+< l , [ [ 14, 3 ],  [ 7, 2 ],  [ 3, 1 ],  [ 4, 1 ]] >
+< o , [ [ 2, 1 ],  [ 5, 1 ]] >
+< r , [ [ 3, 1 ]] >
+< u , [ [ 2, 1 ],  [ 2, 1 ]] >
+Reducer 1 input
+< a , [ [ 14, 4 ],  [ 2, 1 ],  [ 1, 1 ]] >
+< d , [ [ 12, 4 ],  [ 14, 2 ]] >
+< m , [ [ 4, 1 ],  [ 4, 1 ],  [ 18, 2 ],  [ 8, 2 ]] >
+< p , [ [ 4, 1 ]] >
+< s , [ [ 5, 2 ],  [ 2, 1 ],  [ 8, 2 ]] >
+< v , [ [ 4, 1 ],  [ 4, 1 ]] >
+< y , [ [ 9, 2 ]] >
+Reducer 2 input
+< b , [ [ 9, 1 ],  [ 4, 1 ],  [ 4, 1 ]] >
+< e , [ [ 9, 1 ],  [ 15, 3 ],  [ 5, 1 ],  [ 5, 1 ]] >
+< h , [ [ 15, 3 ]] >
+< t , [ [ 8, 2 ],  [ 3, 1 ]] >
+< w , [ [ 23, 4 ]] >
+Reducer 0 output
+< c , 9.0 >
+< f , 3.3333333333333335 >
+< i , 2.7 >
+< l , 4.0 >
+< o , 3.5 >
+< r , 3.0 >
+< u , 2.0 >
+Reducer 1 output
+< a , 2.8333333333333335 >
+< d , 4.333333333333333 >
+< m , 5.666666666666667 >
+< p , 4.0 >
+< s , 3.0 >
+< v , 4.0 >
+< y , 4.5 >
+Reducer 2 output
+< b , 5.666666666666667 >
+< e , 5.666666666666667 >
+< h , 5.0 >
+< t , 3.6666666666666665 >
+< w , 5.75 >
