@@ -3,7 +3,7 @@ package com.clinton;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GroupByPair<K extends Comparable<? super K>, V> {
+public class GroupByPair<K extends Comparable<? super K>, V> implements Comparable<GroupByPair<K, V>> {
     private final K key;
     private List<V> values;
 
@@ -27,5 +27,10 @@ public class GroupByPair<K extends Comparable<? super K>, V> {
     @Override
     public String toString() {
         return String.format("(%s, %s)", key, values);
+    }
+
+    @Override
+    public int compareTo(GroupByPair<K, V> groupByPair) {
+        return this.key.compareTo(groupByPair.key);
     }
 }

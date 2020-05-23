@@ -41,10 +41,12 @@ public class AverageCount {
         }
 
 
-        Map<Integer, List<Pair<Character, Pair<Integer, Integer>>>> partitionedPairs = new HashMap<>();
+        Map<Integer, List<Pair<Character, Pair<Integer, Integer>>>> allPartitionedPairs = new HashMap<>();
 
         for (int i = 0; i < mappers.length; i++) {
             Mapper mapper = mappers[i];
+
+            Map<Integer, List<Pair<Character, Pair<Integer, Integer>>>> partitionedPairs = new HashMap<>();
 
             // Create reducer splits
             for (Pair<Character, Pair<Integer, Integer>> pair : mapper.getPairs()) {
@@ -61,17 +63,20 @@ public class AverageCount {
 
             for (int j = 0; j < r; j++) {
                 if(!partitionedPairs.containsKey(j)) continue;
+                partitionedPairs.get(j).sort(Pair::compareTo);
                 System.out.println(String.format("\n===== Pairs send from Mapper %d Reducer %d =====", i, j));
                 Util.printAll(partitionedPairs.get(j));
             }
+
+            Util.mergeMap(allPartitionedPairs, partitionedPairs);
         }
 
         // Perform reduction for partitions
         Reducer[] reducers = new Reducer[r];
 
         for (int j = 0; j < r; j++) {
-            if(!partitionedPairs.containsKey(j)) continue;
-            List<Pair<Character, Pair<Integer, Integer>>> pairs = partitionedPairs.get(j);
+            if(!allPartitionedPairs.containsKey(j)) continue;
+            List<Pair<Character, Pair<Integer, Integer>>> pairs = allPartitionedPairs.get(j);
             Reducer reducer = new Reducer(pairs);
             reducer.reduce();
             reducers[j] = reducer;

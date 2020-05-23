@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public abstract class Util {
     private static final String DELIMITER = "[\\s-]+";
@@ -26,6 +27,19 @@ public abstract class Util {
 
     public static  <T> void printAll(List<T> list) {
         list.forEach(System.out::println);
+    }
+
+    public static <K, V> void mergeMap(Map<K, List<V>> end, Map<K, List<V>> from) {
+        for (K k : from.keySet()) {
+            List<V> values;
+            if(end.containsKey(k)) {
+                values = end.get(k);
+            } else {
+                values = new ArrayList<>();
+            }
+            values.addAll(from.get(k));
+            end.put(k, values);
+        }
     }
 
     private static String processWord(String w) {

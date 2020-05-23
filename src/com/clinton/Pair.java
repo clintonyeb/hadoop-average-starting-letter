@@ -1,6 +1,6 @@
 package com.clinton;
 
-public class Pair<K extends Comparable<? super K>, V> {
+public class Pair<K extends Comparable<? super K>, V> implements Comparable<Pair<K, V>> {
     K key;
     V value;
 
@@ -12,5 +12,10 @@ public class Pair<K extends Comparable<? super K>, V> {
     @Override
     public String toString() {
         return String.format("(%s, %s)", key, value);
+    }
+
+    @Override
+    public int compareTo(Pair<K, V> pair) {
+        return this.key.compareTo(pair.key);
     }
 }

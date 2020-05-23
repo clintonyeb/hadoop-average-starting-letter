@@ -1,10 +1,7 @@
 package com.clinton;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Mapper {
     private List<Pair<Character, Pair<Integer, Integer>>> pairs;
@@ -33,7 +30,7 @@ public class Mapper {
         for (Character key : cache.keySet()) {
             pairs.add(new Pair<>(key, cache.get(key)));
         }
-//        pairs.sort(Comparator.comparing(p -> p.key));
+//        Collections.sort(pairs);
     }
 
     private Pair<Integer, Integer> addPairs(Pair<Integer, Integer> pair1, Pair<Integer, Integer> pair2) {

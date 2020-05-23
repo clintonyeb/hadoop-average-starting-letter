@@ -32,7 +32,7 @@ public class Reducer {
         for (Character key : cache.keySet()) {
             groups.add(cache.get(key));
         }
-        groups.sort(Comparator.comparing(GroupByPair::getKey));
+        Collections.sort(groups);
         return groups;
     }
 
@@ -53,7 +53,7 @@ public class Reducer {
 
             pairs.add(new Pair<>(group.getKey(), average));
         }
-        pairs.sort(Comparator.comparing(p -> p.key));
+        Collections.sort(pairs);
         return pairs;
     }
 
